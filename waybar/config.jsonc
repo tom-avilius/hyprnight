@@ -1,0 +1,80 @@
+
+{
+  "layer": "top",
+  "height": 20,
+  "position": "bottom",
+  "exclusive": "true",
+  "margin": "3 80 10 80",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["cpu", "memory", "disk", "pulseaudio", "pulseaudio/slider", "clock"],
+  "modules-center": [ "custom/me", "mpris"],
+
+  "hyprland/workspaces": {
+
+    "format": "{icon}",
+    "format-icons": {
+
+      "1": "<span color=\"#eb6f92\">1</span>",
+      "2": "<span color=\"#f6c177\">2</span>",
+      "3": "<span color=\"#ea9a97\">3</span>",
+      "4": "<span color=\"#9ccfd8\">4</span>",
+      "5": "<span color=\"#e0def4\">5</span>",
+      "6": "<span color=\"#908caa\">6</span>"
+    }
+  },
+
+  "custom/me": {
+
+    "format": "tom-avilius\t"
+  },
+
+  "mpris": {
+
+    "interval": 10,
+    "format": "{status_icon}\t{artist} - {title}",
+    "title-len": 25,
+    "artist-len": 15,
+    "status-icons": {
+      "playing": "\uf04b",
+      "paused": "\uf04c"
+    }
+  },
+
+  "cpu": {
+
+    "interval": 2,
+    "tooltip": false,
+    "format": "{usage}% <span color=\"#eb6f92\">\uf4bc</span>"
+  },
+
+  "memory": {
+
+    "format": "{used} <span color=\"#56949f\">󰽘</span>"
+  },
+
+  "disk": {
+
+    "format": "{used} <span color=\"#c4a7e7\">\uebb5</span>",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "<span color=\"#f6c177\">{icon}</span>",
+    "format-icons": {
+        "headphone": "",
+        "default": ["", ""]
+    },
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 150,
+    "orientation": "horizontal"
+  },
+
+  "clock": {
+
+    "format": "{:%H:%M}",
+    "tooltip": false
+  }
+}
